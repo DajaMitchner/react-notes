@@ -1,4 +1,15 @@
-.App {
+.studentCard {
+  color: aqua;
+  height: 90px;
+  width: 90px;
+  border: solid 4px;
+  border-color: rgb(182, 110, 182);
+  padding: 10px;
+  margin: 5px;
+}
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +46,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
