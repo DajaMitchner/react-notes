@@ -1,66 +1,29 @@
+import Home from './components/Home/Home.component';
+import StudentList from './components/StudentList/StudentList.component';
+import Form from './components/Form/Form.component.jsx';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import './App.css';
 
-
-let studentData = [
-  {
-    id: 1,
-    name: "Eddy",
-    color: "chartreuse",
-    school: "Nebula Academy",
-  },
-  {
-    id: 2,
-    name: "Chelsea",
-    color: "purple",
-    school: "Nebula Academy",
-  },
-  {
-    id: 3,
-    name: "Tauseef",
-    color: "orange",
-    school: "Nebula Academy",
-  },
-  {
-    id: 4, 
-    name: "Maurice", 
-    color: "red", 
-    school: "Nebula Academy",
-  },
-  { 
-    id: 5, 
-    name: "D'aja", 
-    color: "blue", 
-    school: "Nebula Academy", 
-  },
-  {
-     id: 6, 
-     name: "Jasmine", 
-     color: "pink", 
-     school: "Nebula Academy", 
-  },
-  { 
-    id: 7,
-     name: "Anitria",
-      color: "blue", 
-      school: "Nebula Academy",
-  },];
-
-function App() {
-  return (
+// function App() {
+//   return (
+//     <div>
+//     <Home/>
+//     <StudentList/>
+//     </div>
+//   );
+// }
+function App(){
+   return (
+      <Router>
     <div>
-    <StudentList />
-    <StudentList />
-    <StudentList />
-    <StudentList />
-    </div>
-  );
-}
-
-function StudentList() {
-  return studentData.map((student) => (
-    <div className='studentCard'>
-      <p>{student.name} is a {student.school} student</p>
-    </div>
-  ))
+    {  <Switch>
+         <Route exact path='/' component={Home}/>
+         <Route exact path='/students' component={StudentList}/>
+         <Route exact path='/form' component={Form}/>
+         </Switch> }
+   </div>
+   </Router>
+  )
 }
 export default App;
+
